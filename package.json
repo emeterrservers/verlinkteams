@@ -4,7 +4,7 @@
     "description": "A free WebRTC browser-based video call",
     "main": "server.js",
     "scripts": {
-        "start": "node app/src/server.js",
+        "start": "pm2-runtime start app/src/server.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "npx prettier --write .",
         "docker-build": "docker build --tag mirotalk/p2p:latest .",
@@ -50,7 +50,8 @@
         "swagger-ui-express": "^5.0.0",
         "uuid": "9.0.0",
         "xss": "^1.0.14",
-        "yamljs": "^0.3.0"
+        "yamljs": "^0.3.0",
+        "pm2": "^5.2.2"
     },
     "devDependencies": {
         "node-fetch": "^3.3.2",
